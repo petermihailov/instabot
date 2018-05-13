@@ -1,0 +1,16 @@
+{
+  "name": "instabot",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Automation of personal life",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Peter Mihailov",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^1.29.0",
+    "instagram-private-api": "^0.6.7"
+  }
+}

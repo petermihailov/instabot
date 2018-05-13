@@ -1,0 +1,8 @@
+{
+  "name": "configName",
+  "login": "instaLogin",
+  "password": "instaPassword",
+  "blackList": [
+    "peter.mihailov"
+  ]
+}
