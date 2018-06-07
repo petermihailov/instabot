@@ -8,7 +8,7 @@ class InstaBot {
     const {name} = account;
     this.timer = null;
     this.account = account;
-    this.interval = options.interval || 30000;
+    this.interval = options.interval || 1 * 60 * 1000;
     this.depth = options.depth || 1;
     this.logger = options.logger || {
       log: Function.prototype,
