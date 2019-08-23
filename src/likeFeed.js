@@ -1,4 +1,4 @@
-const {is} = require('./utils');
+const { is } = require('./utils');
 
 const likeFeed = async (ig, auth) => {
   const userFeed = ig.feed.timeline('pull_to_refresh');
