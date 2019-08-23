@@ -1,10 +1,11 @@
-const InstaBot = require('./bot');
-const Logger = require('./logger.js');
-const account = require('./account.json');
-
+const likeFeed = require('./likeFeed');
 const interval = 5 * 60 * 1000;
-const depth = 5;
-const logger = new Logger(account.name);
+let counter = 0;
 
-const bot = new InstaBot(account, {logger, depth, interval});
-bot.start();
+const loop = () => {
+  console.log('start: ' + ++counter);
+  likeFeed();
+};
+
+loop();
+setInterval(loop, interval);

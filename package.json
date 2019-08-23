@@ -10,7 +10,7 @@
   "author": "Peter Mihailov",
   "license": "ISC",
   "dependencies": {
-    "date-fns": "^1.29.0",
-    "instagram-private-api": "^0.6.8"
+    "date-fns": "^2.0.0",
+    "instagram-private-api": "^1.24.0"
   }
 }

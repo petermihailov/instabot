@@ -1,7 +1,7 @@
 {
   "name": "configName",
-  "login": "instaLogin",
-  "password": "instaPassword",
+  "username": "igLogin",
+  "password": "igPassword",
   "blackList": [
     "peter.mihailov"
   ]
