@@ -1,16 +1,18 @@
 {
   "name": "instabot",
   "private": true,
-  "version": "0.1.0",
+  "version": "2.0.0",
   "description": "Automation of personal life",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node src/index.js",
+    "format": "prettier --single-quote --write \"src/**/*.js\""
   },
-  "author": "Peter Mihailov",
-  "license": "ISC",
   "dependencies": {
-    "date-fns": "^1.29.0",
-    "instagram-private-api": "^0.6.8"
+    "date-fns": "^2.0.0",
+    "instagram-private-api": "^1.24.0"
+  },
+  "devDependencies": {
+    "prettier": "1.18.2"
   }
 }
