@@ -1,6 +1,7 @@
 const { IgApiClient } = require('instagram-private-api');
 const igAuth = require('./auth');
 const likeFeed = require('./likeFeed');
+const watchStories = require('./watchStories');
 const { log, delay } = require('./utils');
 
 const start = async () => {
@@ -10,11 +11,13 @@ const start = async () => {
   const loop = () =>
     likeFeed(ig, auth)
       .then(log.likes)
-      .catch(console.log)
-      .then(delay(1))
+      .then(() => watchStories(ig))
+      .then(log.views)
+      .catch(log.error)
+      .then(delay(5))
       .then(loop);
 
   loop();
 };
 
-start().catch(console.log);
+start().catch(log.error);
