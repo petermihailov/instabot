@@ -1,7 +1,5 @@
 {
   "username": "igLogin",
   "password": "igPassword",
-  "blackList": [
-    "peter.mihailov"
-  ]
+  "blackList": []
 }
