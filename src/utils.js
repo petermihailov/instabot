@@ -37,7 +37,7 @@ const log = {
       // log.message('no stories yet');
       return;
     }
-    console.log(`👀 [${fns.unique(stories.map(get.userName)).join(', ')}]`);
+    log.message(`👀 [${fns.unique(stories.map(get.userName)).join(', ')}]`);
   }
 };
 
