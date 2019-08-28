@@ -27,7 +27,6 @@ const log = {
   error: err => console.error(get.time(), '\t', err),
   likes: posts => {
     if (posts.length === 0) {
-      log.message('❤️');
       // log.message('no likes yet');
       return;
     }
