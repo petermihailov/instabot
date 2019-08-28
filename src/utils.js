@@ -8,7 +8,7 @@ const fns = {
 };
 
 const get = {
-  time: () => format(Date.now(), 'kk:mm:ss'),
+  time: () => format(Date.now(), 'dd.MM.yyyy HH:mm:ss'),
   user: ({ user }) => user,
   userName: ({ user }) => user.username,
   userPk: ({ user }) => user.pk
@@ -23,24 +23,23 @@ const is = {
 };
 
 const log = {
-  start: () => console.log(`${get.time()}: start`),
+  message: str => console.log(get.time(), '\t', str),
+  error: err => console.error(get.time(), '\t', err),
   likes: posts => {
     if (posts.length === 0) {
-      console.log(`${get.time()}: no likes yet`);
+      log.message('❤️');
+      // log.message('no likes yet');
       return;
     }
-    console.log(`${get.time()}: ♥ [${fns.unique(posts.map(get.userName)).join(', ')}]`);
+    log.message(`❤️ [${fns.unique(posts.map(get.userName)).join(', ')}]`);
   },
   views: stories => {
     if (stories.length === 0) {
-      console.log(`${get.time()}: no stories yet`);
+      // log.message('no stories yet');
       return;
     }
-    console.log(
-      `${get.time()}: 👀 [${fns.unique(stories.map(get.userName)).join(', ')}]`
-    );
-  },
-  error: console.log
+    console.log(`👀 [${fns.unique(stories.map(get.userName)).join(', ')}]`);
+  }
 };
 
 module.exports = { is, get, log, ...fns };
