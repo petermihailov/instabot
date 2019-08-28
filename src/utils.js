@@ -29,7 +29,7 @@ const log = {
       console.log(`${get.time()}: no likes yet`);
       return;
     }
-    console.log(`${get.time()}: ♥ [${posts.map(get.userName).join(', ')}]`);
+    console.log(`${get.time()}: ♥ [${fns.unique(posts.map(get.userName)).join(', ')}]`);
   },
   views: stories => {
     if (stories.length === 0) {
