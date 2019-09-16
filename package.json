@@ -9,8 +9,8 @@
     "format": "prettier --single-quote --write \"src/**/*.js\""
   },
   "dependencies": {
-    "date-fns": "^2.0.0",
-    "instagram-private-api": "^1.24.0"
+    "date-fns": "^2.2.1",
+    "instagram-private-api": "^1.28.0"
   },
   "devDependencies": {
     "prettier": "1.18.2"
